@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#000000">
+    <title>پلتفرم بهشت زهرا تهران</title>
+    <meta name="description" content="Behesht Zahra Tehran">
+    <meta name="keywords"
+        content="tehran,beheshtzahra" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="__manifest.json">
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="backLoader">
+            <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon">
+        </div>
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light">
+        <div class="pageTitle">
+            <img src="assets/img/logo.png" alt="logo" class="logo">
+        </div>
+    </div>
+    <!-- * App Header -->
+
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <!-- Wallet Card -->
+        <div class="section wallet-card-section pt-1">
+            <div class="wallet-card">
+                <div class="img-wrapper">
+                    <img src="assets/img/emamKhomeini.jpg" alt="img" class="image-block imaged width100">
+                </div>
+            </div>
+        </div>
+        <!-- Wallet Card -->
+
+        <!-- Monthly Bills -->
+        <div class="section full mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">خدمات</h2>
+            </div>
+            <!-- carousel multiple -->
+            <div class="carousel-multiple splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="airplane-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">خدمات تور و گردشگری</div>
+                                <p>سامانه تی تی شهر</p>
+                                <a href="khadamat/app-tour.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="medkit-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">سلامت و ورزش</div>
+                                <p>سامانه تی تی شهر</p>
+                                <a href="khadamat/app-health.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="medkit-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">مشاوره روان‌شناختی</div>
+                                <p></p>
+                                <a href="khadamat/app-psychological.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="card-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">تسهیلات مالی و وام</div>
+                                <p></p>
+                                <a href="khadamat/app-loan.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="storefront-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">فروشگاه رفاهی</div>
+                                <p></p>
+                                <a href="khadamat/app-store.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="bill-box">
+                                <div class="img-wrapper">
+                                    <div class="iconbox">
+                                        <ion-icon name="school-outline"></ion-icon>
+                                    </div>
+                                </div>
+                                <div class="price">آموزش و توسعه</div>
+                                <p></p>
+                                <a href="khadamat/app-learn.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- * carousel multiple -->
+        </div>
+        <!-- * Monthly Bills -->
+
+        <!-- News -->
+        <div class="section full mt-4 mb-3">
+            <div class="section-heading padding">
+                <h2 class="title">آخرین اخبار</h2>
+            </div>
+
+            <!-- carousel multiple -->
+            <div class="carousel-multiple splide" id="newsSplide">
+                <div class="splide__track">
+                    <ul class="splide__list" id="news-list">
+                    </ul>
+                </div>
+            </div>
+            <!-- * carousel multiple -->
+        </div>
+        <!-- * News -->
+
+    </div>
+    <!-- * App Capsule -->
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <a href="index.html" class="item active">
+            <div class="col">
+                <ion-icon name="pie-chart-outline"></ion-icon>
+                <strong>صفحه اصلی</strong>
+            </div>
+        </a>
+        <a href="app-settings.html" class="item">
+            <div class="col">
+                <ion-icon name="settings-outline"></ion-icon>
+                <strong>تنظیمات</strong>
+            </div>
+        </a>
+        <a href="app-contact.html" class="item">
+            <div class="col">
+                <ion-icon name="call-outline"></ion-icon>
+                <strong>تماس با ما</strong>
+            </div>
+        </a>
+        <a href="app-about.html" class="item">
+            <div class="col">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <strong>درباره ما</strong>
+            </div>
+        </a>
+    </div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- iOS Add to Home Action Sheet -->
+    <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">افزودن به صفحه اصلی</h5>
+                    <a href="#" class="close-button" data-bs-dismiss="modal">
+                        <ion-icon name="close"></ion-icon>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="action-sheet-content text-center">
+                        <div class="mb-1"><img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                        </div>
+                        <div>
+                            نصب <strong>بهشت زهرا تهران</strong> در صفحه اصلی آیفون شما
+                        </div>
+                        <div>
+                            Tap <ion-icon name="share-outline"></ion-icon> و به صفحه اصلی اضافه کنید.
+                        </div>
+                        <div class="mt-2">
+                            <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- * iOS Add to Home Action Sheet -->
+
+
+    <!-- Android Add to Home Action Sheet -->
+    <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
+        role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">افزودن به صفحه اصلی</h5>
+                    <a href="#" class="close-button" data-bs-dismiss="modal">
+                        <ion-icon name="close"></ion-icon>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <div class="action-sheet-content text-center">
+                        <div class="mb-1">
+                            <img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                        </div>
+                        <div>
+                            نصب <strong>بهشت زهرا تهران</strong> در صفحه اصلی اندروید شما.
+                        </div>
+                        <div>
+                            ضربه بزنید <ion-icon name="ellipsis-vertical"></ion-icon> و به صفحه اصلی اضافه کنید.
+                        </div>
+                        <div class="mt-2">
+                            <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- * Android Add to Home Action Sheet -->
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const newsList = document.getElementById("news-list");
+
+		  if (window.newsSplideInstances) {
+			window.newsSplideInstances.forEach(instance => instance.destroy());
+		  }
+		  window.newsSplideInstances = [];
+
+		  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.irna.ir/rss")
+			.then(response => response.json())
+			.then(data => {
+			  if (data.status === "ok" && data.items) {
+				data.items.forEach(item => {
+				  if (!item.enclosure || !item.enclosure.link) {
+					return;
+				  }
+
+				  const li = document.createElement("li");
+				  li.className = "splide__slide";
+
+				  li.innerHTML = `
+					<div class="blog-card">
+					  <img src="${item.enclosure.link}" alt="news" class="imaged w-100">
+					  <div class="text">
+						<h4 class="title"><a href="${item.link}" target="_blank" >${item.title}</a></h4>
+					  </div>
+					</div>
+				  `;
+
+				  newsList.appendChild(li);
+				});
+
+				const splides = document.querySelectorAll('.carousel-multiple.splide');
+				splides.forEach(splideElement => {
+				  const splideInstance = new Splide(splideElement, {
+					perPage: 3,
+					gap: '1rem',
+					breakpoints: {
+					  640: { perPage: 1 },
+					  768: { perPage: 2 },
+					},
+				  });
+				  splideInstance.mount();
+				  window.newsSplideInstances.push(splideInstance);
+				});
+
+			  } else {
+				newsList.innerHTML = "<li>خطا در دریافت خبرها</li>";
+			  }
+			})
+			.catch(err => {
+			  console.error(err);
+			  newsList.innerHTML = "<li>خطا در دریافت خبرها</li>";
+			});
+		});
+
+
+	</script>
+
+    <!-- ========= JS Files =========  -->
+    <!-- Bootstrap -->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Base Js File -->
+    <script src="assets/js/base.js"></script>
+
+    <script>
+        // Add to Home with 2 seconds delay.
+        AddtoHome("2000", "once");
+    </script>
+
+
+
+</body>
+
+</html>
