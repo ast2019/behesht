@@ -1,0 +1,15 @@
+{
+  "name": "behesht-zahra-platform",
+  "version": "1.0.0",
+  "description": "Behesht Zahra Tehran Platform",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build completed - static files ready' && exit 0",
+    "start": "echo 'Starting static server' && exit 0"
+  },
+  "keywords": ["behesht-zahra", "tehran", "platform"],
+  "author": "Behesht Zahra Organization",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
