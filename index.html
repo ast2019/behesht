@@ -17,6 +17,50 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mobile-effects.css">
     <link rel="manifest" href="__manifest.json">
+    <style>
+        /* اصلاح نمایش ریسپانسیو کارت تصویر */
+        .wallet-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+        }
+        
+        .wallet-card .img-wrapper {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wallet-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+        
+        /* تنظیمات ریسپانسیو */
+        @media (max-width: 768px) {
+            .wallet-card .img-wrapper {
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .wallet-card .img-wrapper {
+                height: 160px;
+            }
+        }
+        
+        /* تنظیمات برای حالت landscape موبایل */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .wallet-card .img-wrapper {
+                height: 120px;
+            }
+        }
+    </style>
 </head>
 
 <body>
