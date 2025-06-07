@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -44,7 +44,7 @@
         <div class="section wallet-card-section pt-1">
             <div class="wallet-card">
                 <div class="img-wrapper">
-                    <img src="assets/img/emamKhomeini.jpg" alt="img" class="image-block imaged width100">
+                    <img src="assets/img/emamKhomeini.jpg" alt="تصویر امام خمینی" class="image-block imaged w-100">
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 <h2 class="title">خدمات رفاهی</h2>
             </div>
             <!-- carousel multiple -->
-            <div class="carousel-multiple splide">
+            <div class="carousel-multiple splide" id="servicesSplide">
                 <div class="splide__track">
                     <ul class="splide__list">
 
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="price">مشاوره روان‌شناختی</div>
-                                <p></p>
+                                <p>خدمات مشاوره تخصصی</p>
                                 <a href="khadamat/app-psychological.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
                             </div>
                         </li>
@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                                 <div class="price">تسهیلات مالی و وام</div>
-                                <p></p>
+                                <p>خدمات مالی و بانکی</p>
                                 <a href="khadamat/app-loan.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
                             </div>
                         </li>
@@ -120,7 +120,7 @@
                                     </div>
                                 </div>
                                 <div class="price">فروشگاه رفاهی</div>
-                                <p></p>
+                                <p>خرید آنلاین محصولات</p>
                                 <a href="khadamat/app-store.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
                             </div>
                         </li>
@@ -133,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div class="price">آموزش و توسعه</div>
-                                <p></p>
+                                <p>دوره‌های آموزشی</p>
                                 <a href="khadamat/app-learn.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
                             </div>
                         </li>
@@ -155,6 +155,14 @@
             <div class="carousel-multiple splide" id="newsSplide">
                 <div class="splide__track">
                     <ul class="splide__list" id="news-list">
+                        <!-- Loading placeholder -->
+                        <li class="splide__slide">
+                            <div class="blog-card">
+                                <div class="text">
+                                    <h4 class="title">در حال بارگذاری اخبار...</h4>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -260,66 +268,6 @@
     </div>
     <!-- * Android Add to Home Action Sheet -->
 
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-		  const newsList = document.getElementById("news-list");
-
-		  if (window.newsSplideInstances) {
-			window.newsSplideInstances.forEach(instance => instance.destroy());
-		  }
-		  window.newsSplideInstances = [];
-
-		  fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.irna.ir/rss")
-			.then(response => response.json())
-			.then(data => {
-			  if (data.status === "ok" && data.items) {
-				data.items.forEach(item => {
-				  if (!item.enclosure || !item.enclosure.link) {
-					return;
-				  }
-
-				  const li = document.createElement("li");
-				  li.className = "splide__slide";
-
-				  li.innerHTML = `
-					<div class="blog-card">
-					  <img src="${item.enclosure.link}" alt="news" class="imaged w-100">
-					  <div class="text">
-						<h4 class="title"><a href="${item.link}" target="_blank" >${item.title}</a></h4>
-					  </div>
-					</div>
-				  `;
-
-				  newsList.appendChild(li);
-				});
-
-				const splides = document.querySelectorAll('.carousel-multiple.splide');
-				splides.forEach(splideElement => {
-				  const splideInstance = new Splide(splideElement, {
-					perPage: 3,
-					gap: '1rem',
-					breakpoints: {
-					  640: { perPage: 1 },
-					  768: { perPage: 2 },
-					},
-				  });
-				  splideInstance.mount();
-				  window.newsSplideInstances.push(splideInstance);
-				});
-
-			  } else {
-				newsList.innerHTML = "<li>خطا در دریافت خبرها</li>";
-			  }
-			})
-			.catch(err => {
-			  console.error(err);
-			  newsList.innerHTML = "<li>خطا در دریافت خبرها</li>";
-			});
-		});
-
-
-	</script>
-
     <!-- ========= JS Files =========  -->
     <!-- Bootstrap -->
     <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
@@ -331,11 +279,110 @@
     <script src="assets/js/base.js"></script>
 
     <script>
+        // Initialize services carousel first
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialize services carousel
+            const servicesSplide = new Splide('#servicesSplide', {
+                perPage: 3,
+                gap: '1rem',
+                breakpoints: {
+                    640: { perPage: 1 },
+                    768: { perPage: 2 },
+                },
+            });
+            servicesSplide.mount();
+
+            // News loading functionality
+            const newsList = document.getElementById("news-list");
+            let newsSplideInstance = null;
+
+            // Function to initialize news splide
+            function initNewsSplide() {
+                if (newsSplideInstance) {
+                    newsSplideInstance.destroy();
+                }
+                
+                newsSplideInstance = new Splide('#newsSplide', {
+                    perPage: 3,
+                    gap: '1rem',
+                    breakpoints: {
+                        640: { perPage: 1 },
+                        768: { perPage: 2 },
+                    },
+                });
+                newsSplideInstance.mount();
+            }
+
+            // Load news with error handling
+            fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.irna.ir/rss")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === "ok" && data.items && data.items.length > 0) {
+                        // Clear loading placeholder
+                        newsList.innerHTML = '';
+                        
+                        // Add news items (limit to 10 items)
+                        const newsItems = data.items.slice(0, 10);
+                        newsItems.forEach(item => {
+                            // Check if item has required properties
+                            if (!item.title || !item.link) {
+                                return;
+                            }
+
+                            const li = document.createElement("li");
+                            li.className = "splide__slide";
+
+                            // Use placeholder image if no image available
+                            const imageUrl = (item.enclosure && item.enclosure.link) 
+                                ? item.enclosure.link 
+                                : 'assets/img/sample/photo/1.jpg';
+
+                            li.innerHTML = `
+                                <div class="blog-card">
+                                    <img src="${imageUrl}" alt="خبر" class="imaged w-100" onerror="this.src='assets/img/sample/photo/1.jpg'">
+                                    <div class="text">
+                                        <h4 class="title">
+                                            <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            `;
+
+                            newsList.appendChild(li);
+                        });
+
+                        // Initialize splide after adding content
+                        initNewsSplide();
+                    } else {
+                        throw new Error('No news data available');
+                    }
+                })
+                .catch(err => {
+                    console.error('Error loading news:', err);
+                    newsList.innerHTML = `
+                        <li class="splide__slide">
+                            <div class="blog-card">
+                                <div class="text">
+                                    <h4 class="title">خطا در دریافت اخبار</h4>
+                                    <p>لطفاً بعداً تلاش کنید</p>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+                    initNewsSplide();
+                });
+        });
+    </script>
+
+    <script>
         // Add to Home with 2 seconds delay.
         AddtoHome("2000", "once");
     </script>
-
-
 
 </body>
 
