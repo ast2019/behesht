@@ -171,6 +171,37 @@
     background: linear-gradient(135deg, #00b08e, #1DCC70);
 }
 
+/* افکت‌های خاص برای لوگو در کارت‌های خدمات */
+.logo-container {
+    background: #ffffff !important;
+    border: 2px solid #00b08e;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .logo-container,
+.service-card:active .logo-container {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa) !important;
+    border-color: #1DCC70;
+    box-shadow: 0 4px 15px rgba(0, 176, 142, 0.3);
+}
+
+.service-card:hover .service-logo,
+.service-card:active .service-logo {
+    transform: scale(1.1);
+    filter: brightness(1.2) contrast(1.2);
+}
+
 /* افکت‌های خاص برای دکمه‌ها */
 .btn-enhanced {
     position: relative;
@@ -298,6 +329,17 @@ body.dark-mode .text-glow {
 
 body.dark-mode .text-glow:hover {
     text-shadow: 0 0 20px rgba(29, 204, 112, 0.8);
+}
+
+body.dark-mode .logo-container {
+    background: #161129 !important;
+    border-color: #00b08e;
+}
+
+body.dark-mode .service-card:hover .logo-container,
+body.dark-mode .service-card:active .logo-container {
+    background: linear-gradient(135deg, #161129, #2d1f3b) !important;
+    border-color: #1DCC70;
 }
 
 /* افکت‌های انیمیشن تاخیری */
