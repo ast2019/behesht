@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile-effects.css">
     <link rel="manifest" href="__manifest.json">
 </head>
 
@@ -23,14 +24,14 @@
     <!-- loader -->
     <div id="loader">
         <div class="backLoader">
-            <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon">
+            <img src="assets/img/loading-icon.png" alt="icon" class="loading-icon animate-float">
         </div>
     </div>
     <!-- * loader -->
 
     <!-- App Header -->
-    <div class="appHeader bg-primary text-light">
-        <div class="pageTitle">
+    <div class="appHeader bg-primary text-light gradient-bg app-header-enhanced">
+        <div class="pageTitle animate-fade-in">
             <img src="assets/img/logo.png" alt="logo" class="logo">
         </div>
     </div>
@@ -42,9 +43,9 @@
 
         <!-- Wallet Card -->
         <div class="section wallet-card-section pt-1">
-            <div class="wallet-card">
+            <div class="wallet-card wallet-card-enhanced touch-effect animate-bounce-in">
                 <div class="img-wrapper">
-                    <img src="assets/img/emamKhomeini.jpg" alt="تصویر امام خمینی" class="image-block imaged w-100">
+                    <img src="assets/img/emamKhomeini.jpg" alt="تصویر امام خمینی" class="image-block imaged w-100 image-hover-effect">
                 </div>
             </div>
         </div>
@@ -53,7 +54,7 @@
         <!-- Monthly Bills -->
         <div class="section full mt-4">
             <div class="section-heading padding">
-                <h2 class="title">خدمات رفاهی</h2>
+                <h2 class="title text-glow animate-slide-in">خدمات رفاهی</h2>
             </div>
             <!-- carousel multiple -->
             <div class="carousel-multiple splide" id="servicesSplide">
@@ -61,80 +62,80 @@
                     <ul class="splide__list">
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-1">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="airplane-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">خدمات تور و گردشگری</div>
                                 <p>سامانه تی تی شهر</p>
-                                <a href="khadamat/app-tour.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-tour.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-2">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="medkit-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">سلامت و ورزش</div>
                                 <p>سامانه تی تی شهر</p>
-                                <a href="khadamat/app-health.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-health.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-3">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="medkit-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">مشاوره روان‌شناختی</div>
                                 <p>خدمات مشاوره تخصصی</p>
-                                <a href="khadamat/app-psychological.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-psychological.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-4">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="card-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">تسهیلات مالی و وام</div>
                                 <p>خدمات مالی و بانکی</p>
-                                <a href="khadamat/app-loan.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-loan.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-5">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="storefront-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">فروشگاه رفاهی</div>
                                 <p>خرید آنلاین محصولات</p>
-                                <a href="khadamat/app-store.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-store.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
                         <li class="splide__slide">
-                            <div class="bill-box">
+                            <div class="bill-box service-card touch-effect animate-fade-in delay-5">
                                 <div class="img-wrapper">
-                                    <div class="iconbox">
+                                    <div class="iconbox animate-float">
                                         <ion-icon name="school-outline"></ion-icon>
                                     </div>
                                 </div>
                                 <div class="price">آموزش و توسعه</div>
                                 <p>دوره‌های آموزشی</p>
-                                <a href="khadamat/app-learn.html" class="btn btn-primary btn-block btn-sm">اطلاعات بیشتر</a>
+                                <a href="khadamat/app-learn.html" class="btn btn-primary btn-block btn-sm btn-enhanced">اطلاعات بیشتر</a>
                             </div>
                         </li>
 
@@ -148,7 +149,7 @@
         <!-- News -->
         <div class="section full mt-4 mb-3">
             <div class="section-heading padding">
-                <h2 class="title">آخرین اخبار</h2>
+                <h2 class="title text-glow animate-slide-in">آخرین اخبار</h2>
             </div>
 
             <!-- carousel multiple -->
@@ -157,9 +158,9 @@
                     <ul class="splide__list" id="news-list">
                         <!-- Loading placeholder -->
                         <li class="splide__slide">
-                            <div class="blog-card">
+                            <div class="blog-card news-card shimmer-effect">
                                 <div class="text">
-                                    <h4 class="title">در حال بارگذاری اخبار...</h4>
+                                    <h4 class="title">در حال بارگذاری اخبار<span class="loading-dots"></span></h4>
                                 </div>
                             </div>
                         </li>
@@ -176,25 +177,25 @@
 
     <!-- App Bottom Menu -->
     <div class="appBottomMenu">
-        <a href="index.html" class="item active">
+        <a href="index.html" class="item active bottom-menu-item touch-effect">
             <div class="col">
                 <ion-icon name="pie-chart-outline"></ion-icon>
                 <strong>صفحه اصلی</strong>
             </div>
         </a>
-        <a href="app-settings.html" class="item">
+        <a href="app-settings.html" class="item bottom-menu-item touch-effect">
             <div class="col">
                 <ion-icon name="settings-outline"></ion-icon>
                 <strong>تنظیمات</strong>
             </div>
         </a>
-        <a href="app-contact.html" class="item">
+        <a href="app-contact.html" class="item bottom-menu-item touch-effect">
             <div class="col">
                 <ion-icon name="call-outline"></ion-icon>
                 <strong>تماس با ما</strong>
             </div>
         </a>
-        <a href="app-about.html" class="item">
+        <a href="app-about.html" class="item bottom-menu-item touch-effect">
             <div class="col">
                 <ion-icon name="information-circle-outline"></ion-icon>
                 <strong>درباره ما</strong>
@@ -216,7 +217,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="action-sheet-content text-center">
-                        <div class="mb-1"><img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                        <div class="mb-1"><img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2 animate-bounce-in">
                         </div>
                         <div>
                             نصب <strong>بهشت زهرا تهران</strong> در صفحه اصلی آیفون شما
@@ -225,7 +226,7 @@
                             Tap <ion-icon name="share-outline"></ion-icon> و به صفحه اصلی اضافه کنید.
                         </div>
                         <div class="mt-2">
-                            <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                            <button class="btn btn-primary btn-block btn-enhanced" data-bs-dismiss="modal">بستن</button>
                         </div>
                     </div>
 
@@ -250,7 +251,7 @@
                 <div class="modal-body">
                     <div class="action-sheet-content text-center">
                         <div class="mb-1">
-                            <img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2">
+                            <img src="assets/img/icon/192x192.png" alt="image" class="imaged w64 mb-2 animate-bounce-in">
                         </div>
                         <div>
                             نصب <strong>بهشت زهرا تهران</strong> در صفحه اصلی اندروید شما.
@@ -259,7 +260,7 @@
                             ضربه بزنید <ion-icon name="ellipsis-vertical"></ion-icon> و به صفحه اصلی اضافه کنید.
                         </div>
                         <div class="mt-2">
-                            <button class="btn btn-primary btn-block" data-bs-dismiss="modal">بستن</button>
+                            <button class="btn btn-primary btn-block btn-enhanced" data-bs-dismiss="modal">بستن</button>
                         </div>
                     </div>
                 </div>
@@ -281,10 +282,39 @@
     <script>
         // Initialize services carousel first
         document.addEventListener("DOMContentLoaded", () => {
-            // Initialize services carousel
+            // Add scroll effect to header
+            const header = document.querySelector('.appHeader');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+
+            // Add parallax effect to elements
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                parallaxElements.forEach(element => {
+                    const rate = scrolled * -0.5;
+                    element.style.transform = `translateY(${rate}px)`;
+                });
+            });
+
+            // Initialize services carousel with enhanced effects
             const servicesSplide = new Splide('#servicesSplide', {
                 perPage: 3,
                 gap: '1rem',
+                autoplay: true,
+                interval: 3000,
+                pauseOnHover: true,
                 breakpoints: {
                     640: { perPage: 1 },
                     768: { perPage: 2 },
@@ -292,7 +322,7 @@
             });
             servicesSplide.mount();
 
-            // News loading functionality
+            // News loading functionality with enhanced effects
             const newsList = document.getElementById("news-list");
             let newsSplideInstance = null;
 
@@ -305,6 +335,9 @@
                 newsSplideInstance = new Splide('#newsSplide', {
                     perPage: 3,
                     gap: '1rem',
+                    autoplay: true,
+                    interval: 4000,
+                    pauseOnHover: true,
                     breakpoints: {
                         640: { perPage: 1 },
                         768: { perPage: 2 },
@@ -313,7 +346,7 @@
                 newsSplideInstance.mount();
             }
 
-            // Load news with error handling
+            // Load news with error handling and enhanced effects
             fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.irna.ir/rss")
                 .then(response => {
                     if (!response.ok) {
@@ -328,7 +361,7 @@
                         
                         // Add news items (limit to 10 items)
                         const newsItems = data.items.slice(0, 10);
-                        newsItems.forEach(item => {
+                        newsItems.forEach((item, index) => {
                             // Check if item has required properties
                             if (!item.title || !item.link) {
                                 return;
@@ -343,8 +376,8 @@
                                 : 'assets/img/sample/photo/1.jpg';
 
                             li.innerHTML = `
-                                <div class="blog-card">
-                                    <img src="${imageUrl}" alt="خبر" class="imaged w-100" onerror="this.src='assets/img/sample/photo/1.jpg'">
+                                <div class="blog-card news-card touch-effect animate-fade-in delay-${Math.min(index + 1, 5)}">
+                                    <img src="${imageUrl}" alt="خبر" class="imaged w-100 image-hover-effect" onerror="this.src='assets/img/sample/photo/1.jpg'">
                                     <div class="text">
                                         <h4 class="title">
                                             <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
@@ -357,7 +390,9 @@
                         });
 
                         // Initialize splide after adding content
-                        initNewsSplide();
+                        setTimeout(() => {
+                            initNewsSplide();
+                        }, 500);
                     } else {
                         throw new Error('No news data available');
                     }
@@ -366,7 +401,7 @@
                     console.error('Error loading news:', err);
                     newsList.innerHTML = `
                         <li class="splide__slide">
-                            <div class="blog-card">
+                            <div class="blog-card news-card touch-effect animate-fade-in">
                                 <div class="text">
                                     <h4 class="title">خطا در دریافت اخبار</h4>
                                     <p>لطفاً بعداً تلاش کنید</p>
@@ -376,6 +411,39 @@
                     `;
                     initNewsSplide();
                 });
+
+            // Add touch feedback for all interactive elements
+            const touchElements = document.querySelectorAll('.touch-effect');
+            touchElements.forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Add intersection observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            const animatedElements = document.querySelectorAll('[class*="animate-"]');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
         });
     </script>
 
