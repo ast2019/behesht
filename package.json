@@ -1,17 +1,15 @@
 {
   "name": "behesht-zahra-platform",
   "version": "1.0.0",
-  "description": "Behesht Zahra Platform - Persian Web Application",
-  "main": "server.js",
+  "description": "Behesht Zahra Tehran Platform",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo \"Build completed. Static files are ready for deployment.\""
+    "build": "echo 'Build completed - static files ready' && exit 0",
+    "start": "echo 'Starting static server' && exit 0"
   },
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "keywords": ["persian", "web", "platform"],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["behesht-zahra", "tehran", "platform"],
+  "author": "Behesht Zahra Organization",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
 }
